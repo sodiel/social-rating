@@ -1,69 +1,67 @@
 @import "tailwindcss";
+
+@theme {
+  /* Define design tokens */
+  --height-viewport-stable: var(--tg-viewport-stable-height);
+  --height-viewport: var(--tg-viewport-height);
+
+  --color-background: var(--tg-theme-bg-color);
+  --color-text: var(--tg-theme-text-color);
+  --color-hint: var(--tg-theme-hint-color);
+  --color-link: var(--tg-theme-link-color);
+  --color-button: var(--tg-theme-button-color);
+  --color-button-text: var(--tg-theme-button-text-color);
+  --color-secondary-bg: var(--tg-theme-secondary-bg-color);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Apply theme variables to actual properties */
+  --tw-height-viewport-stable: var(--height-viewport-stable);
+  --tw-height-viewport: var(--height-viewport);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --tw-bg-background: var(--color-background);
+  --tw-text-color: var(--color-text);
+  --tw-hint-color: var(--color-hint);
+  --tw-link-color: var(--color-link);
+  --tw-button-color: var(--color-button);
+  --tw-button-text-color: var(--color-button-text);
+  --tw-secondary-bg: var(--color-secondary-bg);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Now you can use them in Tailwind utility classes */
+.bg-background {
+  background-color: var(--tw-bg-background);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.text-text {
+  color: var(--tw-text-color);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.text-hint {
+  color: var(--tw-hint-color);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.text-link {
+  color: var(--tw-link-color);
+}
+
+.bg-button {
+  background-color: var(--tw-button-color);
+}
+
+.text-button-text {
+  color: var(--tw-button-text-color);
+}
+
+.bg-secondary-bg {
+  background-color: var(--tw-secondary-bg);
+}
+
+/* Example for height utilities */
+.h-viewport {
+  height: var(--tw-height-viewport);
+}
+
+.h-viewport-stable {
+  height: var(--tw-height-viewport-stable);
 }
