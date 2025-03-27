@@ -10,8 +10,8 @@ function App() {
   const user = window.Telegram.WebApp.initDataUnsafe?.user; // Get user data
 
   return (
-    <div className="bg-secondary-bg  text-text flex flex-col p-4">
-      <h1 className="text-3xl font-bold justify-start items-start bg-background">
+    <div className="bg-secondary-bg  text-text flex flex-col p-0">
+      <h1 className="text-3xl font-bold justify-start items-start rounded-b-2xl shadow-md mt-0 p-2 w-min ml-4">
         Hello, {user?.first_name || "Guest"}!
       </h1>
       <div className="flex flex-col p-4 m-10 justify-center items-center">
