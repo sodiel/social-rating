@@ -6,9 +6,9 @@ export type CardProps = {
 };
 
 const Card: React.FC<CardProps> = ({ age, name, avatarURL }) => {
-  const username = user?.first_name || name || "Guest";
+  const username = name || user?.first_name || "Guest";
   return (
-    <div className="bg-background text-text flex flex-col p-4 m-4 shadow-xl rounded-2xl">
+    <div className="bg-background text-text flex flex-col p-4 my-4 shadow-xl rounded-2xl">
       {avatarURL ? <img className="rounded-2xl" src={avatarURL}></img> : null}
       <h1 className="text-3xl font-bold justify-start items-start">
         {username} {age ? `, ${age}` : null}
