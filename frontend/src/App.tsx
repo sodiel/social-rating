@@ -23,15 +23,15 @@ function App() {
           }
         ></Card>
         <Card
-          name="Анатолий"
-          age={23}
+          name="Сергей"
+          age={13}
           avatarURL={
             "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
           }
         ></Card>
         <Card
-          name="Анатолий"
-          age={23}
+          name="Алексей"
+          age={223}
           avatarURL={
             "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
           }
