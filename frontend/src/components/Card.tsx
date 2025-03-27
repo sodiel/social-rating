@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ age, name, avatarURL }) => {
     <div className="bg-background text-text flex flex-col p-4 my-4 shadow-xl rounded-2xl">
       {avatarURL ? <img className="rounded-2xl" src={avatarURL}></img> : null}
       <h1 className="text-3xl font-bold justify-start items-start">
-        {username} {age ? `, ${age}` : null}
+        {username}{age ? `, ${age}` : null}
       </h1>
       <div className="flex flex-col p-4 justify-center items-center">
         <div className="">
