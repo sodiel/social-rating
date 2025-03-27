@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import Card from "./components/Card";
 function App() {
   useEffect(() => {
     // Initialize Telegram Web App
@@ -10,16 +10,40 @@ function App() {
   const user = window.Telegram.WebApp.initDataUnsafe?.user; // Get user data
 
   return (
-    <div className="bg-background text-text h-viewport flex flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold">
+    <div className="bg-secondary-bg text-text h-viewport flex flex-col p-4">
+      <h1 className="text-3xl font-bold justify-start items-start">
         Hello, {user?.first_name || "Guest"}!
       </h1>
-      <button
-        className="mt-4 px-6 py-2 rounded-lg bg-button text-button-text text-lg font-medium shadow-md transition hover:opacity-80"
-        onClick={() => window.Telegram.WebApp.showAlert("Hello!")}
-      >
-        Show Alert
-      </button>
+      <div className="flex flex-col p-4 m-10 justify-center items-center ">
+        <Card
+          name="Анатолий"
+          age={23}
+          avatarURL={
+            "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
+          }
+        ></Card>
+        <Card
+          name="Анатолий"
+          age={23}
+          avatarURL={
+            "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
+          }
+        ></Card>
+        <Card
+          name="Анатолий"
+          age={23}
+          avatarURL={
+            "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
+          }
+        ></Card>
+        <Card
+          name="Анатолий"
+          age={23}
+          avatarURL={
+            "https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter"
+          }
+        ></Card>
+      </div>
     </div>
   );
 }
